@@ -24,7 +24,6 @@ pip install selenium pandas openpyxl
   - 脚本会自动创建 "number" 列存放查询结果
   - 保证UID为纯文本格式，避免错误
 
-
 二、脚本配置
 1. 将提供的 Python 代码保存为phone_query.py（与msedgedriver.exe同目录）
 2. 脚本中的配置参数：Excel文件路径和XPath（即元素在网页结构中的位置，该脚本需要UID输入框、查询按钮、手机号结果的XPath）（位于if name == "__main__":下方）：
@@ -64,7 +63,7 @@ python phone_query.py
 - 脚本运行结束后，会显示：所有操作完成，结果已保存至：D:/桌面/工作簿1.xlsx
 - 按 Enter 键关闭脚本
 - 查看 Excel 文件，"number" 列已填充查询到的手机号
-- 
+  
 四、常见问题及解决方法
 1. "无法连接到浏览器" 错误
   - 检查是否已用调试模式启动浏览器
@@ -78,7 +77,7 @@ python phone_query.py
 4. 驱动相关错误
   - 确认msedgedriver.exe与脚本在同一目录
   - 检查驱动版本与 Edge 浏览器版本是否匹配
-  - 
+
 五、注意事项
 1. 脚本运行期间，请勿手动操作浏览器，请勿打开脚本正在读写的 Excel 文件（可以打开其他excel）
 2. 平均100个查询会出现3个错误，即前后行手机号重复，可以条件格式突出重复项修改，若出现大量重复，是由于网络原因，可以重新运行一次脚本流程
